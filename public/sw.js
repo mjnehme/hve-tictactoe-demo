@@ -1,4 +1,4 @@
-const RELEASE = "2026-10-09.1";
+const RELEASE = "2026-10-23.1";
 const SCOPE_URL = new URL(self.registration.scope);
 const CACHE_PREFIX = `hve-tictactoe:${SCOPE_URL.pathname}:`;
 const CACHE_NAME = `${CACHE_PREFIX}${RELEASE}`;

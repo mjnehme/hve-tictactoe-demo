@@ -1,7 +1,13 @@
 ---
 title: Tic-Tac-Toe Release Checklist
 description: Candidate, deployment, and public-release gates for the static game
-ms.date: 2026-10-09
+author: Repository maintainers
+ms.date: 2026-10-23
+ms.topic: how-to
+keywords:
+  - release validation
+  - offline updates
+  - palette
 ---
 
 ## Candidate validation
@@ -10,6 +16,7 @@ Complete these checks for every production candidate:
 
 * [ ] `node --test tests/*.test.mjs` passes without package installation
 * [ ] Controlled integrated-browser checks pass
+* [ ] Pale-blue page and matching manifest background, retained cell/win surfaces, rendered text/placeholder contrast, keyboard focus, forced colors, and 320 CSS px reflow pass the [palette and readability checks](manual-validation.md#palette-and-readability), including the blue shell after a waiting update and offline reopen
 * [ ] Runtime assets are limited to `index.html`, `sw.js`, and `manifest.json`
 * [ ] Total uncompressed runtime size is strictly below 50,000 bytes
 * [ ] The `RELEASE` and `data-release` values match and changed from the previous release

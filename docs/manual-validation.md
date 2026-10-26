@@ -1,7 +1,13 @@
 ---
 title: Tic-Tac-Toe Manual Validation
 description: Real-player and human accessibility validation protocol
-ms.date: 2026-10-09
+author: Repository maintainers
+ms.date: 2026-10-23
+ms.topic: how-to
+keywords:
+  - accessibility
+  - readability
+  - manual validation
 ---
 
 ## Evidence rules
@@ -64,6 +70,19 @@ Use at least one human reviewer familiar with the tested assistive technology.
 * [ ] Win and draw results are announced once and remain visible
 * [ ] Custom names retain X or O identity
 * [ ] The offline status and waiting-update message are understandable
+
+### Palette and readability
+
+* [ ] Normal-color pages use the pale-blue `#e6f4ff` background, white cells, and yellow winning cells; browser chrome remains dark
+* [ ] Turn, X/O wins, draw, replay, scores, twelve-character names, and all offline messages remain readable
+* [ ] Text and marks, including actual input text and placeholders, meet 4.5:1 contrast on their rendered backgrounds
+* [ ] Identifying borders and keyboard focus meet 3:1 contrast against applicable adjacent surfaces; inspect cells, both inputs, and replay
+* [ ] White cells remain distinguishable by their dark borders; do not require 3:1 between decorative cell and page fills
+* [ ] Forced colors use system colors with visible focus, board, and winning-state cues instead of requiring pale blue
+
+Record browser-owned input and placeholder colors rather than assuming source
+palette tests cover native controls. Automated browser evidence does not check
+these human-review boxes.
 
 ### Zoom, reflow, and touch
 

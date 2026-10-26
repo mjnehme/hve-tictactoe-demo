@@ -99,7 +99,7 @@ test("install fetches every required asset with HTTP-cache revalidation", async 
     assert.equal(request.credentials, "same-origin");
   }
   const current = [...worker.stores.entries()]
-    .find(([name]) => name.endsWith("2026-10-09.1"));
+    .find(([name]) => name === "hve-tictactoe:/demo/:2026-10-23.1");
   assert.ok(current);
   assert.equal(current[1].size, 3);
 });
